@@ -1,5 +1,5 @@
 const moongose = require('mongoose')
-
+// Define Product Schema
 const productSchema = new moongose.Schema({
   name: {
     type: String,
@@ -22,7 +22,7 @@ const productSchema = new moongose.Schema({
     required: true,
   },
 })
-
+// Create Product Schemma
 const Product = moongose.model("product", productSchema);
 
 module.exports = Product;
