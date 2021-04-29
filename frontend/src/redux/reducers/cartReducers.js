@@ -1,5 +1,6 @@
 import * as actionTypes from "../constants/cartConstants";
 //Reducer holds items on cart and his allowed actions
+// Initial or default state of items cartItems: []
 export const cartReducer = (state = { cartItems: [] }, action) => {
   switch (action.type) {
     case actionTypes.ADD_TO_CART:

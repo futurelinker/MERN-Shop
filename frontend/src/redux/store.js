@@ -15,7 +15,7 @@ const reducer = combineReducers({
   getProducts: getProductsReducer,
   getProductDetails: getProductDetailsReducer,
 });
-// thunk allows to make async request on actions
+// thunk allows to make async request on actionsnpm
 const middleware = [thunk];
 
 // 3. Create store

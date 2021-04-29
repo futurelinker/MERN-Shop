@@ -1,4 +1,7 @@
 require("dotenv").config();
+// Logger
+const morgan = require('morgan')
+
 const express = require("express");
 // DB
 const connectDB = require("./config/db");
@@ -8,6 +11,9 @@ const productRoutes = require("./routes/productRoutes");
 connectDB();
 
 const app = express();
+// Log activity
+app.use(morgan("dev"));
+
 // Parse JSON data
 app.use(express.json());
 
