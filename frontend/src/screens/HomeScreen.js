@@ -30,16 +30,7 @@ const HomeScreen = () => {
         ) : error ? (
           <h2>{error}</h2>
         ) : (
-          products.map((product) => (
-            <Product
-              key={product._id}
-              productId={product._id}
-              name={product.name}
-              price={product.price}
-              description={product.description}
-              imageUrl={product.imageUrl}
-            />
-          ))
+          products.map((product) => <Product />)
         )}
       </div>
     </div>
