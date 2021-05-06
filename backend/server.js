@@ -11,7 +11,11 @@ const app = express();
 // Parse JSON data
 app.use(express.json());
 
+const morgan = require("morgan");
+;
+
 // Middlewares
+app.use(morgan("dev"));
 app.use("/api/products", productRoutes);
 
 const PORT = process.env.PORT || 5000;
